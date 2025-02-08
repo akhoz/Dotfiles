@@ -1,4 +1,4 @@
-/* 
+/*W
   bg - background
   fg - foreground
   br - border
@@ -7,7 +7,8 @@
 /* Main Colors */
 
 @define-color main-fg         #d8dee9;
-@define-color main-bg         rgba(17, 17, 27, 0.9);
+@define-color main-bg         rgba(0, 0, 0, 0.0);
+@define-color secondary-bg    rgba(17, 17, 27, 0.9);
 @define-color main-br         #d8dee9;
 
 @define-color active-bg       #9399b2;
@@ -19,10 +20,23 @@
 @define-color white           #ffffff;
 @define-color black           #000000;
 
+@define-color sky             #04a5e5;
+@define-color red             #f38ba8;
+@define-color lavander        #7287fd;
+@define-color blue            #89b4fa;
+@define-color dark-blue       #1e66f5;
+@define-color mauve           #cba6f7;
+@define-color maroon          #eba0ac;
+@define-color peach           #fab387;
+@define-color yellow          #f9e2af;
+@define-color green           #a6e3a1;
+@define-color teal            #94e2d5;
+@define-color sapphire        #74c7ec;
+
 /* Module Colors */
 
 @define-color module-fg       #d8dee9;
-@define-color workspaces      #181825;
+@define-color module-bg      #181825;
 
 @define-color cpuinfo         #181825;
 @define-color memory          #1e1e2e;

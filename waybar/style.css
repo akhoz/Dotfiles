@@ -1,11 +1,11 @@
-* {
+W {
   font-family: "JetBrainsMono Nerd Font";
   font-weight: bold;
   font-size: 16px;
-  min-height: 32px;
-  padding: 0;
+  min-height: 40px;
+  padding: 0 0 0 0;
   border: none;
-  margin: 0;
+  margin: 0 0 0 0;
 }
 
 @import "theme.css";
@@ -14,20 +14,13 @@
 
 window#waybar {
   background: @main-bg;
-}
-
-/* === Drop Shadow === */
-
-window#waybar > box {
-  background-color: transparent;
-  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 1);
-  margin: 2px;
+  padding: 0 0 0 0;
 }
 
 /* === Tooltip === */
 
 tooltip {
-  background: @main-bg;
+  background: @secondary-bg;
   border: solid;
   border-width: 1.5px;
   border-radius: 8px;
@@ -45,8 +38,6 @@ tooltip label {
   color: @module-fg;
   border-radius: 8px;
   box-shadow: none;
-  margin: 2px 0;
-  padding: 2 2px;
   transition: none;
 }
 #workspaces button:hover {
@@ -56,12 +47,7 @@ tooltip label {
   box-shadow: none;
 }
 #workspaces button.active {
-  color: @active-fg;
-  background: @active-bg;
-  text-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
-  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.4);
-  margin: 2px;
-  padding: 0 6px;
+  background: @dark-blue;
 }
 
 /* === General === */
@@ -78,15 +64,17 @@ tooltip label {
 #custom-wifi,
 #bluetooth,
 #custom-update,
+#custom-cava,
 #custom-media,
 #pulseaudio,
 /* #backlight, */
 #custom-backlight,
 #battery,
+
 #custom-power {
   opacity: 1;
   color: @module-fg;
-  padding: 0 4px;
+  padding: 0 0px;
   text-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
 }
 
@@ -116,60 +104,34 @@ tooltip label {
 
 /* === Modules === */
 
-/* == Window Icon == */
+/* == Distro Icon == */
 
-#custom-ws {
-  background: @main-bg;
-}
-
-/* == Workspaces == */
-
-#custom-left1 {
-  color: @workspaces;
-  background: @main-bg;
-  font-size: 14.68px;
-  margin-bottom: 0;
-  padding-left: 2px;
-}
-#workspaces {
-  background: @workspaces;
-}
-#custom-right1 {
-  color: @workspaces;
-  background: @main-bg;
-  font-size: 14.68px;
-  text-shadow: 3px 0 2px rgba(0, 0, 0, 0.4);
-  margin-bottom: 0;
+#custom-distro {
+  color: @white;
+  background: @dark-blue;
+  border-radius: 10px 0 0 10px;
+  font-size: 24px;
+  padding: 0 10px 0 15px;
+  text-shadow: 0 0 1.5px rgba(0, 0, 0, 1);
 }
 
 /* == Temperature == */
 
-#custom-paddc {
-  padding-right: 22px;
-}
-#custom-left2 {
-  color: @cpuinfo;
-  background: @main-bg;
-  padding-left: 3px;
-}
 #custom-cpuinfo {
-  background: @cpuinfo;
+  background: @module-bg;
+  color: @blue;
   padding-left: 1px;
   padding-right: 0;
 }
 
 /* == Memory == */
-
-#custom-left3 {
-  color: @memory;
-  background: @cpuinfo;
-  padding-left: 3px;
-}
 #memory {
-  background: @memory;
+  background: @module-bg;
+  color: @lavander;
   padding-left: 1px;
   padding-right: 0;
 }
+
 #memory.warning {
   color: @warning;
 }
@@ -179,184 +141,110 @@ tooltip label {
 
 /* == CPU == */
 
-#custom-left4 {
-  color: @cpu;
-  background: @memory;
-  padding-left: 3px;
-}
-/*
-#cpu {
-  background: @cpu;
-}
-*/
 #custom-cpu {
-  background: @cpu;
-}
-#custom-leftin1 {
-  color: @cpu;
-  font-size: 15.5px;
-  margin-bottom: -1px;
-}
-
-/* == Distro Icon == */
-
-#custom-left5 {
-  color: @distro-bg;
-  background: @main-bg;
-  font-size: 15.68px;
-  text-shadow: -2px 0 2px rgba(0, 0, 0, 0.6);
-  margin-bottom: -2px;
-  padding-left: 3px;
-}
-#custom-distro {
-  color: @distro-fg;
-  background: @distro-bg;
-  font-size: 14.6px;
-  margin: 0 -1px -2px 0;
-  padding: 0 0 0 3px;
-  text-shadow: 0 0 1.5px rgba(0, 0, 0, 1);
-}
-#custom-right2 {
-  color: @distro-bg;
-  background: @main-bg;
-  font-size: 15.68px;
-  margin-bottom: -2px;
-}
-
-/* == Time == */
-
-#custom-rightin1 {
-  color: @time;
-  font-size: 15.5px;
-  margin-bottom: -1px;
-}
-#idle_inhibitor {
-  background: @time;
-  margin-right: -2px;
-  padding: 0 0 0 7px;
-}
-#idle_inhibitor:hover {
-  color: @hover-fg;
-  text-shadow: none;
-  box-shadow: none;
-}
-#clock.time {
-  background: @time;
-  padding: 0 3px 0 0;
-}
-#custom-right3 {
-  color: @time;
-  background: @date;
-}
-
-/* == Date == */
-
-#clock.date {
-  background: @date;
-}
-#clock.date:hover {
-  color: @hover-fg;
-  text-shadow: none;
-  box-shadow: none;
-}
-#custom-right4 {
-  color: @date;
-  background: @tray;
-}
-
-/* == Tray == */
-
-#custom-wifi {
-  padding-left: 5px;
-  padding-right: 8px;
-  background: @tray;
-}
-#custom-wifi:hover {
-  color: @hover-fg;
-  text-shadow: none;
-  box-shadow: none;
-}
-
-#bluetooth {
-  padding-right: 5px;
-  background: @tray;
-}
-#bluetooth:hover {
-  color: @hover-fg;
-  text-shadow: none;
-  box-shadow: none;
-}
-
-#custom-update {
-  padding-right: 8px;
-  background: @tray;
-}
-#custom-update:hover {
-  color: @hover-fg;
-  text-shadow: none;
-  box-shadow: none;
-}
-#custom-right5 {
-  color: @tray;
-  background: @main-bg;
+  background: @module-bg;
+  color: @mauve;
 }
 
 /* == Media Info == */
 
 #custom-media {
   font-weight: normal;
-  background-color: @main-bg;
+  border-radius: 0 10px 10px 0;
+  background-color: @module-bg;
+  color: @maroon;
   padding-right: 8px;
   padding-left: 8px;
 }
 #custom-media:hover {
-  color: @hover-fg;
+  color: @red;
+  text-shadow: none;
+  box-shadow: none;
+}
+
+/* == Workspaces == */
+
+#workspaces {
+  background: @module-bg;
+  border-radius: 8px;
+}
+
+
+/* == Time == */
+
+#idle_inhibitor {
+  background: @module-bg;
+  border-radius: 10px 0 0 10px;
+  margin-right: -2px;
+  padding: 0 0 0 7px;
+  color: @red;
+}
+#idle_inhibitor:hover {
+  color: @maroon;
+  text-shadow: none;
+  box-shadow: none;
+}
+#clock.time {
+  background: @module-bg;
+  color: @red;
+  padding: 0 3px 0 0;
+}
+
+/* == Date == */
+
+#clock.date {
+  background: @module-bg;
+  color: @yellow;
+}
+
+#clock.date:hover {
+  color: @peach;
   text-shadow: none;
   box-shadow: none;
 }
 
 /* == Output Device == */
 
-#custom-left6 {
-  color: @pulseaudio;
-  background: @main-bg;
-  padding-left: 3px;
-}
 #pulseaudio {
-  background: @pulseaudio;
+  background: @module-bg;
+  color: @green
 }
 #pulseaudio:hover {
-  color: @hover-fg;
+  color: @teal;
   text-shadow: none;
   box-shadow: none;
 }
 
-/* == Brightness == */
+/* == Tray == */
 
-#custom-left7 {
-  color: @backlight;
-  background: @pulseaudio;
-  padding-left: 2px;
+#custom-wifi {
+  color: @teal;
+  padding-left: 5px;
+  padding-right: 8px;
+  background: @module-bg;
 }
-/*
-#backlight {
-  background: @backlight;
+#custom-wifi:hover {
+  color: @sapphire;
+  text-shadow: none;
+  box-shadow: none;
 }
-*/
-#custom-backlight {
-  background: @backlight;
+
+#bluetooth {
+  color: @teal;
+  padding-right: 5px;
+  background: @module-bg;
+}
+#bluetooth:hover {
+  color: @sapphire;
+  text-shadow: none;
+  box-shadow: none;
 }
 
 /* == Battery == */
 
-#custom-left8 {
-  color: @battery;
-  background: @backlight;
-  padding-left: 2px;
-}
 #battery {
-  color: @module-fg;
-  background: @battery;
+  color: @blue;
+  background: @module-bg;
 }
 #battery.warning {
   color: @warning;
@@ -365,29 +253,19 @@ tooltip label {
   color: @critical;
 }
 #battery.charging {
-  color: @charging;
+  color: @blue;
 }
 
 /* == Power Button == */
 
-#custom-leftin2 {
-  color: @battery;
-  background: @main-bg;
-  font-size: 15.5px;
-  margin-bottom: -1px;
-}
 #custom-power {
-  color: @main-bg;
-  background: @power;
-  text-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
-  box-shadow: 1px 0 2px 1px rgba(0, 0, 0, 0.6);
-  border-radius: 10px;
-  margin: 2px 4px 2px 0;
-  padding: 0 6px 0 9px;
+  background: @dark-blue;
+  border-radius: 0 10px 10px 0;
+  font-size: 18px;
+  padding: 0 10px 0 15px;
 }
+
 #custom-power:hover {
-  color: @hover-fg;
-  background: @hover-bg;
-  text-shadow: none;
-  box-shadow: none;
+  color: @main-fg;
+  background: @red;
 }

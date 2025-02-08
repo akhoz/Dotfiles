@@ -26,13 +26,13 @@ get_cpu_temperature() {
 get_temperature_icon() {
   temp_value=$1
   if [ "$temp_value" -ge 80 ]; then
-    icon="󰸁" # High temperature
+    icon="󰸁 " # High temperature
   elif [ "$temp_value" -ge 70 ]; then
-    icon="󱃂" # Medium temperature
+    icon="󱃂 " # Medium temperature
   elif [ "$temp_value" -ge 60 ]; then
-    icon="󰔏" # Normal temperature
+    icon="󰔏 " # Normal temperature
   else
-    icon="󱃃" # Low temperature
+    icon="󱃃 " # Low temperature
   fi
   echo "$icon"
 }

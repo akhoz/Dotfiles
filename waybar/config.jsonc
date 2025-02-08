@@ -33,12 +33,6 @@
 
   // === Modules ===
 
-  "custom/ws": {
-    "format": "  ",
-    "tooltip": false,
-    "min-length": 3,
-    "max-length": 3
-  },
 
   "hyprland/workspaces": {
     "on-scroll-up": "hyprctl dispatch workspace -1",
@@ -68,7 +62,7 @@
       "critical": 90
     },
 
-    "format": "󰘚 {percentage}%",
+    "format": "󰘚   {percentage}%",
     "format-critical": "󰀦 {percentage}%",
     "tooltip": true,
     "tooltip-format": "Memory Used: {used:0.1f} GB / {total:0.1f} GB",
@@ -208,12 +202,12 @@
 
   "pulseaudio": {
     "format": "{icon} {volume}%",
-    "format-muted": "󰝟 {volume}%",
+    "format-muted": "󰝟    {volume}%",
 
     "format-icons": {
-      "default": ["󰕿", "󰖀", "󰕾"],
-      "headphone": "󰋋",
-      "headset": "󰋋"
+      "default": ["󰕿  ", "󰖀  ", "󰕾  "],
+      "headphone": "󰋋  ",
+      "headset": "󰋋  "
     },
 
     "tooltip": true,
@@ -254,7 +248,7 @@
     },
 
     "format": "{icon} {capacity}%",
-    "format-icons": ["󰂎", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+    "format-icons": ["󰂎  ", "󰁻  ", "󰁼  ", "󰁽  ", "󰁾  ", "󰁿  ", "󰂀  ", "󰂁  ", "󰂂  ", "󰁹  "],
     "format-charging": "󱘖 {capacity}%",
 
     "tooltip-format": "Discharging: {time}",
@@ -269,98 +263,6 @@
     "tooltip": true,
     "tooltip-format": "Power Menu",
     "on-click": "~/.config/waybar/scripts/power-menu.sh"
-  },
-
-  "custom/cava": {
-     // "exec": "sleep 3 && cava -p /home/akhoz/.config/cava/cava.conf | sed -u 's/;//g;s/0/0/g;s/1/1/g;s/2/2/g;s/3/3/g;s/4/4/g;s/5/5/g;s/6/6/g;s/7/7/g;s/8/8/g;s/9/9/g;'"
-  },
-
-  // === Padding ===
-
-  "custom/paddw": {
-    "format": " ",
-    "tooltip": false
-  },
-
-  "custom/paddc": {
-    "format": " ",
-    "tooltip": false
-  },
-
-  // == Left Arrows ==
-
-  "custom/left1": {
-    "format": "",
-    "tooltip": false
-  },
-  "custom/left2": {
-    "format": "",
-    "tooltip": false
-  },
-  "custom/left3": {
-    "format": "",
-    "tooltip": false
-  },
-  "custom/left4": {
-    "format": "",
-    "tooltip": false
-  },
-  "custom/left5": {
-    "format": "",
-    "tooltip": false
-  },
-  "custom/left6": {
-    "format": "",
-    "tooltip": false
-  },
-  "custom/left7": {
-    "format": "",
-    "tooltip": false
-  },
-  "custom/left8": {
-    "format": "",
-    "tooltip": false
-  },
-
-  // == Right Arrows ==
-
-  "custom/right1": {
-    "format": "",
-    "tooltip": false
-  },
-  "custom/right2": {
-    "format": "",
-    "tooltip": false
-  },
-  "custom/right3": {
-    "format": "",
-    "tooltip": false
-  },
-  "custom/right4": {
-    "format": "",
-    "tooltip": false
-  },
-  "custom/right5": {
-    "format": "",
-    "tooltip": false
-  },
-
-  // == Left Inverse ==
-
-  "custom/leftin1": {
-    "format": "",
-    "tooltip": false
-  },
-  "custom/leftin2": {
-    "format": "",
-    "tooltip": false
-  },
-
-  // == Right Inverse ==
-
-  "custom/rightin1": {
-    "format": "",
-    "tooltip": false
   },
 
   "env": {

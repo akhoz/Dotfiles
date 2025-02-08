@@ -23,7 +23,7 @@ if [ "$load" -ge 80 ]; then
   text_output="<span color='#f38ba8'>󰀩 ${load}%</span>"
 else
   # Default color
-  text_output="󰻠 ${load}%"
+  text_output="󰻠   ${load}%"
 fi
 
 tooltip="${model}"

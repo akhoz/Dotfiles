@@ -22,6 +22,7 @@ if [[ -z "$selected_file" ]]; then
     exit 0
 fi
 
+
 selected_path="$SCRIPT_DIR/$selected_file"
 
-hyprctl hyprpaper reload ,"$selected_path"
+hyprctl hyprpaper reload ", $selected_path"

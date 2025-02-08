@@ -62,7 +62,7 @@
       "critical": 90
     },
 
-    "format": "󰘚   {percentage}%",
+    "format": "󰘚 {percentage}%",
     "format-critical": "󰀦 {percentage}%",
     "tooltip": true,
     "tooltip-format": "Memory Used: {used:0.1f} GB / {total:0.1f} GB",
@@ -116,7 +116,7 @@
   },
 
   "clock#date": {
-    "format": "󰨳     {:%m-%d}",
+    "format": "󰨳 {:%m-%d}",
     "tooltip-format": "<tt>{calendar}</tt>",
 
     "calendar": {
@@ -202,12 +202,12 @@
 
   "pulseaudio": {
     "format": "{icon} {volume}%",
-    "format-muted": "󰝟    {volume}%",
+    "format-muted": "󰝟 {volume}%",
 
     "format-icons": {
-      "default": ["󰕿  ", "󰖀  ", "󰕾  "],
-      "headphone": "󰋋  ",
-      "headset": "󰋋  "
+      "default": ["󰕿", "󰖀", "󰕾"],
+      "headphone": "󰋋",
+      "headset": "󰋋"
     },
 
     "tooltip": true,
@@ -248,7 +248,7 @@
     },
 
     "format": "{icon} {capacity}%",
-    "format-icons": ["󰂎  ", "󰁻  ", "󰁼  ", "󰁽  ", "󰁾  ", "󰁿  ", "󰂀  ", "󰂁  ", "󰂂  ", "󰁹  "],
+    "format-icons": ["󰂎", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
     "format-charging": "󱘖 {capacity}%",
 
     "tooltip-format": "Discharging: {time}",

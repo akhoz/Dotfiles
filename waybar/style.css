@@ -1,11 +1,9 @@
-W {
+* {
   font-family: "JetBrainsMono Nerd Font";
   font-weight: bold;
   font-size: 16px;
-  min-height: 32px;
-  padding: 0;
+  min-height: 28px;
   border: none;
-  margin: 0;
 }
 
 @import "theme.css";
@@ -38,6 +36,7 @@ tooltip label {
   color: @module-fg;
   border-radius: 8px;
   box-shadow: none;
+  padding: 5px 11px 5px 11px;
   transition: none;
 }
 #workspaces button:hover {

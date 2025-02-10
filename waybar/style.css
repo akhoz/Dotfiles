@@ -51,9 +51,7 @@ tooltip label {
 
 /* === General === */
 
-#custom-ws,
 #workspaces,
-#window,
 #custom-cpuinfo,
 #memory,
 /* #cpu, */
@@ -62,12 +60,9 @@ tooltip label {
 #clock,
 #custom-wifi,
 #bluetooth,
-#custom-update,
-#custom-cava,
 #custom-media,
 #pulseaudio,
 /* #backlight, */
-#custom-backlight,
 #battery,
 
 #custom-power {
@@ -75,30 +70,6 @@ tooltip label {
   color: @module-fg;
   padding: 0 0px;
   text-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
-}
-
-#custom-left1,
-#custom-left2,
-#custom-left3,
-#custom-left4,
-#custom-left5,
-#custom-left6,
-#custom-left7,
-#custom-left8 {
-  font-size: 14.68px;
-  margin-bottom: 0;
-  text-shadow: -2px 0 2px rgba(0, 0, 0, 0.5);
-}
-
-#custom-right1,
-#custom-right2,
-#custom-right3,
-#custom-right4,
-#custom-right5 {
-  font-size: 14.68px;
-  margin-bottom: 0;
-  padding-right: 3px;
-  text-shadow: 2px 0 2px rgba(0, 0, 0, 0.5);
 }
 
 /* === Modules === */

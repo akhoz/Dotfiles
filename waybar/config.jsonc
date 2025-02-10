@@ -5,6 +5,7 @@
   "mode": "dock",
   "reload_style_on_change": true,
   "gtk-layer-shell": true,
+  "output": "eDP-1",
 
   // Positions
 
@@ -218,17 +219,6 @@
     "min-length": 6,
     "max-length": 6
   },
-  /*
-  "backlight": {
-    "format": "{icon} {percent}%",
-    "format-icons": ["", "", "", "", "", "", "", "", ""],
-    "tooltip": false,
-    "on-scroll-up": "brightnessctl set 2%+",
-    "on-scroll-down": "brightnessctl set 2%-",
-    "min-length": 6,
-    "max-length": 6
-  },
-  */
   "custom/backlight": {
     "exec": "~/.config/waybar/scripts/brightness-control.sh",
     "return-type": "json",
@@ -263,9 +253,5 @@
     "tooltip": true,
     "tooltip-format": "Power Menu",
     "on-click": "~/.config/waybar/scripts/power-menu.sh"
-  },
-
-  "env": {
-    "GDK_SCALE": "1.5"
   }
 }

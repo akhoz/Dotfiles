@@ -31,11 +31,6 @@ icon() {
   fi
 }
 
-send_notification() {
-  icon
-  notify-send -a "state" -r 91190 -i "$icon" -h int:value:"$vol" "Volume: ${vol}%" -u low
-}
-
 notify_mute() {
   mute=$(pactl get-sink-mute @DEFAULT_SINK@ | awk '{print $2}')
   if [ "$mute" = "yes" ]; then
@@ -119,5 +114,3 @@ d) action_volume d ;;
 m) pactl set-sink-mute @DEFAULT_SINK@ toggle && notify_mute && exit 0 ;;
 *) print_error ;;
 esac
-
-send_notification

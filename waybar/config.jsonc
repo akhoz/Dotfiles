@@ -5,7 +5,8 @@
   "mode": "dock",
   "reload_style_on_change": true,
   "gtk-layer-shell": true,
-  "output": "eDP-1",
+  // "output": "eDP-1",
+  "output": "HDMI-A-1",
 
   // Positions
 
